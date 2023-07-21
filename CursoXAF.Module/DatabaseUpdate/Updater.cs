@@ -91,7 +91,7 @@ namespace CursoXAF.Module.DatabaseUpdate {
             }
 
 
-            List<string> _listadoIdiomas = new List<string>() { "español", "inglés", "francés" };
+            List<string> _listadoIdiomas = new List<string>() {"Portugués", "Español", "Inglés", "Francés" };
 
             foreach(var cadaIdioma in _listadoIdiomas)
             {

@@ -86,14 +86,21 @@ namespace CursoXAF.Module.BusinessObjects
 
 
         private FileData _Imagen;
-        [VisibleInListView(true)] //No se muestra en el listado 
+        [VisibleInListView(false)] //No se muestra en el listado 
         public FileData Imagen
         {
             get { return _Imagen; }
             set { SetPropertyValue(nameof(Imagen), ref _Imagen, value); }
         }
 
-
+        [Association("Pais-Recursos")]
+        public XPCollection<Recursos_Pais> Recursos
+        {
+            get
+            {
+                return GetCollection<Recursos_Pais>(nameof(Recursos));
+            }
+        }
         //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
         //public void ActionMethod() {
         //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
