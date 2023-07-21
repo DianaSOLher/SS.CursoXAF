@@ -86,7 +86,7 @@ namespace CursoXAF.Module.BusinessObjects
 
 
         private FileData _Imagen;
-        [VisibleInListView(false)] //No se muestra en el listado 
+        [VisibleInListView(true)] //No se muestra en el listado 
         public FileData Imagen
         {
             get { return _Imagen; }
